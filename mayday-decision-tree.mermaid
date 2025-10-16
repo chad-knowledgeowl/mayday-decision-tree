@@ -13,7 +13,7 @@ flowchart TD
     Pause --> Q4{Can this wait until<br/>normal working hours?<br/><br/>• Bug with workarounds<br/>• Broken for days/weeks already<br/>• Trial signup issues<br/>• Non-critical functionality}
     
     Q4 -->|YES| NoMayday1[❌ DO NOT use Mayday<br/><br/>Instead:<br/>• Post in Slack #dev<br/>• Create/update bug report<br/>• Respond calmly to customers]
-    Q4 -->|NO| Q5{Active, ongoing customer<br/>impact RIGHT NOW<br/>requiring immediate<br/>dev intervention?<br/><br/>• Mass outage affecting all<br/>• Data loss/security incident<br/>• Payment processing broken}
+    Q4 -->|NO| Q5{Active, ongoing customer<br/>impact RIGHT NOW<br/>requiring immediate<br/>dev intervention?<br/><br/>• Mass outage affecting all<br/>• Data loss/security incident}
     
     Q5 -->|YES| Mayday3[🚨 TRIGGER MAYDAY 🚨]
     Q5 -->|NO| NoMayday2[❌ DO NOT use Mayday<br/><br/>Use Slack/tickets instead]
