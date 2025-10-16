@@ -10,7 +10,7 @@ flowchart TD
     Q3 -->|YES| Pause[⏸️ PAUSE<br/><br/>• Take a breath<br/>• Post in Slack with details<br/>• Wait 5-10 min for response<br/>• Ask: Has this been broken<br/>for hours/days already?]
     Q3 -->|NO| Q4
     
-    Pause --> Q4{Can this wait wait until<br/>normal working hours?<br/><br/>• Bug with workarounds<br/>• Broken for days/weeks already<br/>• Trial signup issues<br/>• Non-critical functionality}
+    Pause --> Q4{Can this wait until<br/>normal working hours?<br/><br/>• Bug with workarounds<br/>• Broken for days/weeks already<br/>• Trial signup issues<br/>• Non-critical functionality}
     
     Q4 -->|YES| NoMayday1[❌ DO NOT use Mayday<br/><br/>Instead:<br/>• Post in Slack dev<br/>• Create/update ticket<br/>• Note for stand-up<br/>• Respond calmly to customers]
     Q4 -->|NO| Q5{Active, ongoing customer<br/>impact RIGHT NOW<br/>requiring immediate<br/>dev intervention?<br/><br/>• Mass outage affecting all<br/>• Data loss/security incident<br/>• Payment processing broken}
