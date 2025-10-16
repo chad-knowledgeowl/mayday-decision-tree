@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayday Decision Tree</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        #diagram {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="diagram">Loading diagram...</div>
+
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        
+        // Fetch the .mermaid file from the same directory
+        const response = await fetch('./mayday-decision-tree.mermaid');
+        const code = await response.text();
+        
+        mermaid.initialize({ startOnLoad: false });
+        const {svg} = await mermaid.render('mayday-diagram', code);
+        document.getElementById('diagram').innerHTML = svg;
+    </script>
+</body>
+</html>
